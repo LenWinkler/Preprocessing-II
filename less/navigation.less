@@ -5,8 +5,18 @@ nav {
     justify-content: space-between;
     align-content: center;
 
+    @media @mobile {
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+
     .navH1 {
         padding-top: 5px;
+
+        @media @mobile {
+            margin-top: 3%;
+        }
     }
 
     a {
@@ -14,6 +24,10 @@ nav {
         text-decoration: none;
         color: black;
         margin: 15px;
+
+        @media @mobile {
+            margin: 15px 25px;
+        }
     }
 
     .navLinks {
