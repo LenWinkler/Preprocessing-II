@@ -1,24 +1,78 @@
 .home {
 
+  @media @mobile {
+    width: 100%;
+  }
+
+  header {
+
+    @media @mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h2 {
+      margin-top: 2%;
+
+      @media @mobile {
+        align-self: flex-start;
+        margin-left: 5%;
+        margin-top: 4%;
+      }
+    }
+
+    p {
+      margin-bottom: 4%;
+      padding-bottom: 3%;
+      border-bottom: 2px dashed #A9A9A9;
+
+      @media @mobile {
+        width: 92%;
+        margin-left: 2%;
+        padding-bottom: 8%;
+      }
+    }
+
+    @media @mobile {
+      img {
+        width: 90%;
+      }
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      margin-top: 20px;
+      margin-left: 22px;
+      align-content: center;
+        }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+      }
+
       img {
         border-radius: 10px;
+        width: 93%;
       }
     }
   }
@@ -27,14 +81,34 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      flex-wrap: wrap-reverse;
+      width: 90%;
+      padding-bottom: 40px;
+    }
+
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        width: 100%;
+      }
+
+      @media @mobile {
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -42,8 +116,14 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 90%;
+      margin-top: 35px;
+    }
+
     img {
       border-radius: 10px;
+      width: 100%;
     }
   }
 
@@ -53,9 +133,41 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin-left: 5%;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 93%;
+        margin-bottom: 0;
+        padding-bottom: 30px;
+      }
+
+      @media @mobile {
+        p {
+          width: 93%;
+        }   
+      }
+
+      .btn {
+        .btnMaker(17%, 84%, 5%, 2rem, white, teal);
+
+        @media @mobile {
+          display: flex;
+          justify-content: center;
+          align-items: center; 
+          height: 25px;
+          width: 92%;
+          font-size: 1.8rem;
+        }
+      }
     }
   }
 }// home
